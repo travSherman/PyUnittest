@@ -9,6 +9,7 @@ class testCalc(unittest.TestCase):
         self.assertEqual(calc.triple(2), 6, "Should be 6")
 
         self.assertRaises(ValueError, calc.triple, "2a")
+        self.assertRaises(ValueError, calc.triple, 2.5)
 
     #Test cubed function to check input validation and calculations
     
@@ -16,6 +17,7 @@ class testCalc(unittest.TestCase):
         self.assertEqual(calc.cubed(3) , 27, "Should be 27")
 
         self.assertRaises(ValueError, calc.cubed, "!")
+        self.assertRaises(ValueError, calc.cubed, 2.5)
 
     #Test addThen Cubed function to check input validation and calculations
     
@@ -24,4 +26,6 @@ class testCalc(unittest.TestCase):
 
         self.assertRaises(ValueError, calc.addThenCubed, "gqyqwus", 2)
         self.assertRaises(ValueError, calc.addThenCubed, 4, "")
+        self.assertRaises(ValueError, calc.addThenCubed, 2.5, 1)
+        self.assertRaises(ValueError, calc.addThenCubed, 10, 2.5)
  
