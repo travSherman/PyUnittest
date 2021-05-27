@@ -12,7 +12,6 @@ class testCalc(unittest.TestCase):
         self.assertRaises(ValueError, calc.triple, 2.5)
 
     #Test cubed function to check input validation and calculations
-    
     def test_cubed(self):
         self.assertEqual(calc.cubed(3) , 27, "Should be 27")
 
@@ -20,7 +19,6 @@ class testCalc(unittest.TestCase):
         self.assertRaises(ValueError, calc.cubed, 2.5)
 
     #Test addThen Cubed function to check input validation and calculations
-    
     def test_addThenCubed2(self):
         self.assertEqual(calc.addThenCubed(4, 6), 1000, "Should be 1000")
 
